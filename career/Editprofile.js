@@ -35,6 +35,21 @@ export default function Editprofile({navigation}) {
       </View>
      </View>
   </View> 
+  <View>
+    <Text style={{fontWeight:'bold',fontSize:20,borderBottomWidth:0.5,margin:10,padding:10}} >My journey</Text>
+  </View>
+  <View>
+    <Text style={{fontWeight:'bold',fontSize:20,borderBottomWidth:0.5,margin:10,padding:10}}>My appointments</Text>
+  </View>
+  <View>
+    <Text style={{fontWeight:'bold',fontSize:20,borderBottomWidth:0.5,margin:10,padding:10}}>Scholarships</Text>
+  </View>
+  <View>
+    <Text style={{fontWeight:'bold',fontSize:20,borderBottomWidth:0.5,margin:10,padding:10}}>Help & FAQs</Text>
+  </View>
+  <View>
+    <Text style={{fontWeight:'bold',fontSize:20,borderBottomWidth:0.5,margin:10,padding:10}}>Settings</Text>
+  </View>
 </View>
   )
 }
