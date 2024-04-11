@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Highesteducation from './Highesteducation';
+import Getstarted from './Getstarted';
+import Save from './Save';
+import Beforegoingforward from './Beforegoingforward';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -23,12 +27,12 @@ const MainNavigation=()=>{
 <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
 <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
 <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/> */}
-<Stack.Screen name='Editprofile' component={TabNavigation} options={{headerShown:false}}/>
+{/* <Stack.Screen name='Editprofile' component={TabNavigation} options={{headerShown:false}}/> */}
 {/* <Stack.Screen name='Action' component={Action} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Beforegoingforward' component={Beforegoingforward} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Highesteducation' component={Highesteducation} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Save' component={Save} options={{headerShown:false}}/> */}
-{/* <Stack.Screen name='Getstarted' component={Getstarted} options={{headerShown:false}}/> */}
+<Stack.Screen name='Beforegoingforward' component={Beforegoingforward} options={{headerShown:false}}/>
+<Stack.Screen name='Highesteducation' component={Highesteducation} options={{headerShown:false}}/>
+<Stack.Screen name='Save' component={Save} options={{headerShown:false}}/>
+<Stack.Screen name='Getstarted' component={Getstarted} options={{headerShown:false}}/>
 
 </Stack.Navigator>
   )
