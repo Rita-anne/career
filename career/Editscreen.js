@@ -17,7 +17,7 @@ import {
 } from "expo-image-picker";
 import { storage } from "./Firebaseconfig";
 
-export default function Editscreen() {
+export default function Editscreen({ navigation }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -155,6 +155,7 @@ export default function Editscreen() {
       </View>
       <TouchableOpacity onPress={handleAddDoc}>
         <Text
+          onPress={() => navigation.navigate("Editprofile")}
           style={{
             backgroundColor: "#9633AA",
             color: "white",

@@ -17,16 +17,13 @@ import { Icon } from "react-native-elements";
 
 export default function Editprofile({ navigation }) {
   const [profileData, setProfileData] = useState({
-    name: "Priyanka Sharma",
-    email: "priyankasharma@gmail.com",
-    phone: "+91 9876543210",
-    interests: {
-      dancing: false,
-      blogging: false,
-      music: false,
-    },
+    name: " Rita Gakiza",
+    email: "annegakiza@gmail.com",
+    phone: "+250782455836",
+    interests: { dancing: false, blogging: false, music: false },
     imageUri: require("./assets/Profileimg.jpg"), // Default image
   });
+
   const [image, setImage] = useState(
     "https://images.search.yahoo.com/search/images;_ylt=AwriiOUYmR9mDVkBlGlXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj?type=E210US714G0&p=image&fr=mcafee&th=315&tw=474&imgurl=https%3A%2F%2Fcdn.photographylife.com%2Fwp-content%2Fuploads%2F2014%2F09%2FNikon-D750-Image-Samples-2.jpg&rurl=https%3A%2F%2Fphotographylife.com%2Fnikon-d750-high-resolution-image-samples&size=704KB&name=Nikon+D750+High+Resolution+Image+Samples+-+Photography+Life&oid=1&h=1365&w=2048&turl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GPFEY6kfgxbsja6gmrW6rwHaE7%26pid%3DApi&tt=Nikon+D750+High+Resolution+Image+Samples+-+Photography+Life&sigr=rrsV2x5p1jjT&sigit=ka3Foiz8A5r4&sigi=REw8O8t3tckg&sign=L2QwBpV6gAWS&sigt=L2QwBpV6gAWS"
   );
@@ -143,6 +140,7 @@ export default function Editprofile({ navigation }) {
             onPress={handleEditProfile}
           >
             <Icon
+              onPress={() => navigation.navigate("Editscreen")}
               name="pencil-outline"
               type="material-community"
               color={"#9633AA"}
@@ -153,7 +151,7 @@ export default function Editprofile({ navigation }) {
 
         <View style={{ marginLeft: 10, marginTop: 5 }}>
           <Text style={{ fontWeight: "bold", fontSize: 20 }}>About</Text>
-          <Text>Lives in Mumbai</Text>
+          <Text>Lives in Rwanda</Text>
           <Text>Education: 12th- science</Text>
         </View>
 
@@ -165,7 +163,7 @@ export default function Editprofile({ navigation }) {
                 styles.interestButton,
                 profileData.interests.dancing && styles.clickedInterest,
               ]}
-              // onPress={() => handleInterestClick("dancing")}
+              onPress={() => handleInterestClick("dancing")}
               // onPress={}
             >
               <Text style={styles.interestText}>Dancing</Text>
