@@ -15,7 +15,7 @@ import {
 } from "react-native";
 import { Icon } from "react-native-elements";
 
-export default function Editprofile({ navigation }) {
+export default function Profile({ navigation }) {
   const [profileData, setProfileData] = useState({
     name: " Rita Gakiza",
     email: "annegakiza@gmail.com",
@@ -145,7 +145,12 @@ export default function Editprofile({ navigation }) {
               type="material-community"
               color={"#9633AA"}
             />
-            <Text style={{ color: "#9633AA" }}>Edit</Text>
+            <Text
+              onPress={() => navigation.navigate("Editscreen")}
+              style={{ color: "#9633AA" }}
+            >
+              Edit
+            </Text>
           </TouchableOpacity>
         </View>
 

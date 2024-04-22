@@ -10,12 +10,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Explore from "./Explore";
 import Home from "./Home";
-import Editprofile from "./Editprofile";
+import Profile from "./profile";
 import Apploading from "expo-app-loading";
 import { useFonts, Poppins_100Thin_Italic } from "@expo-google-fonts/poppins";
 import { Icon } from "react-native-elements";
 import Cybersecurity from "./Cybersecurity";
 import Editscreen from "./Editscreen";
+import Settingscreen from "./Settingscreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -23,6 +24,11 @@ const Tab = createBottomTabNavigator();
 const MainNavigation = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="Settingscreen"
+        component={Settingscreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Beforegoingforward"
         component={Beforegoingforward}
@@ -44,7 +50,12 @@ const MainNavigation = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Editprofile"
+        name="signup"
+        component={TabNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Profile"
         component={TabNavigation}
         options={{ headerShown: false }}
       />
@@ -75,7 +86,7 @@ const TabNavigation = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={Editprofile}
+        component={Profile}
         options={{
           headerShown: false,
           tabBarIcon: () => <Icon name="person" />,
@@ -97,7 +108,7 @@ export default function App() {
     <NavigationContainer>
       <MainNavigation />
     </NavigationContainer>
-    //     // <Editprofile />
+    //     // <Profile />
     //     // <Editscreen />
     //     // <Cybersecurity />
   );
