@@ -33,7 +33,12 @@ const SECTIONS = [
         type: "toggle",
         // type: "material-community",
       },
-      { id: "profile", icon: "person", label: "Edit profile", type: "select" },
+      {
+        id: "profile",
+        icon: "person",
+        label: "Edit profile",
+        type: "select",
+      },
       { id: "wifi", icon: "wifi", label: "Use Wi-Fi", type: "toggle" },
     ],
   },
@@ -54,7 +59,7 @@ const SECTIONS = [
   },
 ];
 export default function Settings({ navigation }) {
-  const [form, setform] = useState({
+  const [form, setForm] = useState({
     language: "English",
     darkMode: true,
     wifi: false,
@@ -63,7 +68,7 @@ export default function Settings({ navigation }) {
     <View>
       <TouchableOpacity
         onPress={() => navigation.goBack()}
-        style={{ position: "absolute", left: 0, marginLeft: 10, marginTop: 15 }}
+        style={{ position: "absolute", left: 0, marginLeft: 10, marginTop: 45 }}
       >
         <Icon
           name="chevron-left"
@@ -77,7 +82,7 @@ export default function Settings({ navigation }) {
           style={{
             fontSize: 24,
             marginLeft: 40,
-            marginTop: 15,
+            marginTop: 45,
             fontWeight: "700",
             color: "#1d1d1d",
           }}
