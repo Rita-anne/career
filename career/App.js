@@ -17,6 +17,7 @@ import { Icon } from "react-native-elements";
 import Cybersecurity from "./Cybersecurity";
 import Editscreen from "./Editscreen";
 import Settingscreen from "./Settingscreen";
+import { useColorScheme } from "nativewind";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -108,6 +109,7 @@ export default function App() {
     <NavigationContainer>
       <MainNavigation />
     </NavigationContainer>
+
     //     // <Profile />
     //     // <Editscreen />
     //     // <Cybersecurity />

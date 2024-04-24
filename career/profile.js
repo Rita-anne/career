@@ -216,7 +216,10 @@ export default function Profile({ navigation }) {
           <Icon name="arrow-top-right" type="material-community" />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Settingscreen")}
+          style={styles.menuItem}
+        >
           <Text style={styles.menuText}>Settings</Text>
           <Icon name="arrow-top-right" type="material-community" />
         </TouchableOpacity>

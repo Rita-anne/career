@@ -17,7 +17,7 @@ export default function Getstarted({ navigation }) {
       </Text>
       <Pressable>
         <Button
-          onPress={() => navigation.navigate("Editprofile")}
+          onPress={() => navigation.navigate("Profile")}
           style={{
             backgroundColor: "#9633AA",
             top: 600,
